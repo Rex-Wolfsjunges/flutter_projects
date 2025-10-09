@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1003366435389",
+    "project_id": "authentication-proj-81c39",
+    "storage_bucket": "authentication-proj-81c39.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1003366435389:android:3fd96a717971e0ca967854",
+        "android_client_info": {
+          "package_name": "com.example.ecommerce"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDknSY34i8OUp7_62IW6aAnzrNU1c8wYrs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1003366435389:android:1b023bf50398c156967854",
+        "android_client_info": {
+          "package_name": "com.example.todo_list"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDknSY34i8OUp7_62IW6aAnzrNU1c8wYrs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

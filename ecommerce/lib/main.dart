@@ -1,4 +1,3 @@
-import 'package:ecommerce/core/configs/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,7 +10,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: AppTheme.appTheme,
       debugShowCheckedModeBanner: false,
       home: const Scaffold(),
     );
