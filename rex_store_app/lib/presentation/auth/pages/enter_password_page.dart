@@ -1,5 +1,6 @@
 import "package:flutter/gestures.dart";
 import "package:flutter/material.dart";
+import "package:rex_store_app/common/widgets/appbar/basic_app_bar.dart";
 import "package:rex_store_app/common/widgets/button/basic_app_button.dart";
 
 class EnterPasswordPage extends StatelessWidget {
@@ -8,10 +9,11 @@ class EnterPasswordPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: const BasicAppBar(),
       body: Padding(
         padding: const EdgeInsets.symmetric(
           horizontal: 16,
-          vertical: 80,
+          vertical: 40,
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

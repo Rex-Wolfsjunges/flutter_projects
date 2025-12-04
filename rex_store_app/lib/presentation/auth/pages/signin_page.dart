@@ -1,6 +1,7 @@
 import "package:flutter/gestures.dart";
 import "package:flutter/material.dart";
 import "package:rex_store_app/common/helper/navigator/app_navigator.dart";
+import "package:rex_store_app/common/widgets/appbar/basic_app_bar.dart";
 import "package:rex_store_app/common/widgets/button/basic_app_button.dart";
 import "package:rex_store_app/presentation/auth/pages/enter_password_page.dart";
 
@@ -10,10 +11,11 @@ class SigninPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: const BasicAppBar(hideBack: true,),
       body: Padding(
         padding: const EdgeInsets.symmetric(
           horizontal: 16,
-          vertical: 80,
+          vertical: 40,
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -47,7 +49,7 @@ class SigninPage extends StatelessWidget {
   Widget _continueButton(BuildContext context) {
     return BasicAppButton(
       onPressed: () {
-        AppNavigator.pushReplacement(context, const EnterPasswordPage());
+        AppNavigator.push(context, const EnterPasswordPage());
       },
       title: "Continue",
     );
