@@ -1,7 +1,9 @@
 import "package:flutter/gestures.dart";
 import "package:flutter/material.dart";
+import "package:rex_store_app/common/helper/navigator/app_navigator.dart";
 import "package:rex_store_app/common/widgets/appbar/basic_app_bar.dart";
 import "package:rex_store_app/common/widgets/button/basic_app_button.dart";
+import "package:rex_store_app/presentation/auth/pages/forgot_password.dart";
 
 class EnterPasswordPage extends StatelessWidget {
   const EnterPasswordPage({super.key});
@@ -61,7 +63,7 @@ class EnterPasswordPage extends StatelessWidget {
               TextSpan(
                   text: "Reset",
                   recognizer: TapGestureRecognizer()..onTap = () {
-
+                    AppNavigator.push(context, const ForgotPasswordPage());
                   },
                   style: const TextStyle(
                     fontWeight: FontWeight.bold,
