@@ -5,8 +5,8 @@ import "package:rex_store_app/presentation/auth/pages/signin_page.dart";
 import "package:rex_store_app/presentation/splash/bloc/splash_cubit.dart";
 import "package:rex_store_app/presentation/splash/bloc/splash_state.dart";
 
-import "../../../core/configs/assets/app_vectors.dart";
-import "../../../core/configs/theme/app_colors.dart";
+import 'package:rex_store_app/core/configs/assets/app_vectors.dart';
+import 'package:rex_store_app/core/configs/theme/app_colors.dart';
 
 class SplashPage extends StatelessWidget {
   const SplashPage({super.key});
@@ -17,17 +17,12 @@ class SplashPage extends StatelessWidget {
       listener: (context, state) {
         if (state is UnAuthenticated) {
           Navigator.pushReplacement(
-            context, MaterialPageRoute(builder: (context) => SigninPage()));
+              context, MaterialPageRoute(builder: (context) => SigninPage()));
         }
       },
       child: Scaffold(
-        backgroundColor: AppColors.primary,
-        body: Center(
-          child: SvgPicture.asset(
-            AppVectors.appLogo
-          )
-        )
-      ),
+          backgroundColor: AppColors.primary,
+          body: Center(child: SvgPicture.asset(AppVectors.appLogo))),
     );
   }
 }
