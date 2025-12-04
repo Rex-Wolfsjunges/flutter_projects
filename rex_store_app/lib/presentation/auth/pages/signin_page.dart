@@ -1,5 +1,8 @@
+import "package:flutter/gestures.dart";
 import "package:flutter/material.dart";
-import "package:rex_store_app/controllers/basic_app_button.dart";
+import "package:rex_store_app/common/helper/navigator/app_navigator.dart";
+import "package:rex_store_app/common/widgets/button/basic_app_button.dart";
+import "package:rex_store_app/presentation/auth/pages/enter_password_page.dart";
 
 class SigninPage extends StatelessWidget {
   const SigninPage({super.key});
@@ -19,8 +22,9 @@ class SigninPage extends StatelessWidget {
             const SizedBox(height: 20,),
             _emailField(context),
             const SizedBox(height: 20,),
-            _continueButton(),
-
+            _continueButton(context),
+            const SizedBox(height: 20,),
+            _createAccount(context),
           ],
         ),
       ),
@@ -28,21 +32,44 @@ class SigninPage extends StatelessWidget {
   }
 
   Widget _signinText(BuildContext context) {
-    return const Text('Sign In', style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold));
+    return const Text(
+        'Sign In', style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold));
   }
 
   Widget _emailField(BuildContext context) {
     return const TextField(
-      decoration: InputDecoration(
-        hintText: "Enter Email",
-      )
+        decoration: InputDecoration(
+          hintText: "Enter Email",
+        )
     );
   }
 
-  Widget _continueButton() {
+  Widget _continueButton(BuildContext context) {
     return BasicAppButton(
-      onPressed: () {},
+      onPressed: () {
+        AppNavigator.pushReplacement(context, const EnterPasswordPage());
+      },
       title: "Continue",
     );
+  }
+
+  Widget _createAccount(BuildContext context) {
+    return RichText(
+      text: TextSpan(
+        children: [
+          const TextSpan(
+            text: "Don't you hava an account?",
+          ),
+          TextSpan(
+            text: "Create one",
+            recognizer: TapGestureRecognizer()..onTap = () {
+
+            },
+            style: const TextStyle(
+              fontWeight: FontWeight.bold,
+            )
+          )
+        ]
+      ));
   }
 }
